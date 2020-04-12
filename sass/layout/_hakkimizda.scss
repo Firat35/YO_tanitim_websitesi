@@ -1,0 +1,46 @@
+#hakkimizda {
+    background-color: gray;
+    color: white;
+    height: 100vh;
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        padding: 1.5rem 0;
+    }
+    .sep {
+        display:flex;
+        justify-content: center;
+        align-items: center;  
+
+        .line{
+            border-bottom: 0.1rem solid darkgrey;
+            width: 45%;      
+        }
+        .circle{
+            width: 4px;
+            height: 4px;
+            border: 1px solid darkgrey;
+            border-radius: 50%;            
+            background-color: darkgrey;
+            margin: 0 2rem;
+        }
+    }
+
+    .pic{
+        margin: 3rem;
+        height: 40vh;
+        background-image: url(../../img/pic-1.jpg);
+        background-position: center center;
+    }
+
+    p{  
+        line-height: 1.6;
+        word-spacing: 0.7rem; 
+        margin: 2rem 3rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4 ;
+        overflow: hidden;
+    }
+    
+}

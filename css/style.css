@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: "Dosis";
+  src: url("../../css/fonts/Dosis-Regular.ttf"); }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  font-size: 1.6rem;
+  font-family: Dosis, sans-serif;
+  letter-spacing: 0.2rem; }
+
+header {
+  height: 100vh;
+  background-image: url(../../img/header-photo.jpg);
+  box-shadow: inset 0 0 150px 250px rgba(0, 0, 0, 0.4);
+  background-attachment: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  header nav {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    header nav .menu_icon {
+      display: block;
+      cursor: pointer; }
+      header nav .menu_icon div {
+        width: 35px;
+        height: 5px;
+        background-color: #AAA;
+        margin: 6px 0;
+        transition: 0.4s; }
+      @media (min-width: 42.625em) {
+        header nav .menu_icon {
+          display: none; } }
+    header nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.7s;
+      list-style: none; }
+      header nav ul li {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 1rem 2rem;
+        border-bottom: 1px solid gray;
+        text-align: right; }
+        header nav ul li:hover {
+          background-color: white;
+          cursor: pointer; }
+          header nav ul li:hover a {
+            color: goldenrod;
+            font-weight: 500; }
+        header nav ul li a {
+          text-decoration: none;
+          color: gray; }
+    header nav .visible {
+      max-height: 250px; }
+    @media (min-width: 42.625em) {
+      header nav {
+        padding-top: 2rem; }
+        header nav ul {
+          display: flex;
+          flex-direction: row;
+          max-height: 250px;
+          list-style: none; }
+          header nav ul li {
+            position: relative; }
+            header nav ul li:not(:first-child)::after {
+              content: "";
+              position: absolute;
+              left: -2px;
+              top: 20%;
+              height: 60%;
+              width: 1px;
+              border-right: 1px solid gray; }
+            header nav ul li:hover {
+              background-color: white; }
+            header nav ul li a {
+              text-decoration: none; } }
+  header .heading {
+    display: block;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 50vw;
+    top: 55vh;
+    translate: -50% -50%; }
+    header .heading span {
+      font-size: 4rem; }
+
+#hakkimizda {
+  background-color: gray;
+  color: white;
+  height: 100vh; }
+  #hakkimizda h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem 0; }
+  #hakkimizda .sep {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #hakkimizda .sep .line {
+      border-bottom: 0.1rem solid darkgrey;
+      width: 45%; }
+    #hakkimizda .sep .circle {
+      width: 4px;
+      height: 4px;
+      border: 1px solid darkgrey;
+      border-radius: 50%;
+      background-color: darkgrey;
+      margin: 0 2rem; }
+  #hakkimizda .pic {
+    margin: 3rem;
+    height: 40vh;
+    background-image: url(../../img/pic-1.jpg);
+    background-position: center center; }
+  #hakkimizda p {
+    line-height: 1.6;
+    word-spacing: 0.7rem;
+    margin: 2rem 3rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden; }
+
+#hizmetlerimiz {
+  background-color: gray;
+  color: white; }
+  #hizmetlerimiz h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem 0; }
+  #hizmetlerimiz .container {
+    padding: 1.5rem;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+    #hizmetlerimiz .container h2 {
+      text-align: center;
+      padding: 1.5rem;
+      padding-bottom: 0; }
+    #hizmetlerimiz .container p {
+      padding: 1.5rem; }
+    #hizmetlerimiz .container .pic {
+      position: relative;
+      overflow: hidden;
+      height: 30rem; }
+      #hizmetlerimiz .container .pic img {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        height: 30rem;
+        width: 100%;
+        transition: transform 1s;
+        object-fit: cover; }
+
+#iletisim {
+  background-color: gray;
+  color: white;
+  height: 100vh; }
+  #iletisim h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem 0; }

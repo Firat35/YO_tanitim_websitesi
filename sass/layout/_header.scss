@@ -1,0 +1,109 @@
+
+header {
+    height: 100vh;
+    background-image: url(../../img/header-photo.jpg);
+    box-shadow:inset 0 0 150px 250px  rgba(0, 0, 0, 0.4);
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .logo {
+        // transition: transform 2s;
+        // transform-origin: 50% 50%;
+        // &:hover {
+        //     transform: rotateY(360deg) ;
+        // }
+        
+    }
+    nav {
+        padding: 1rem 2rem ;   
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .menu_icon {
+            display: block;
+            cursor: pointer;
+            div {
+                width: 35px;
+                height: 5px;
+                background-color: #AAA;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            @include medium {
+                display: none;
+            }
+        }   
+        ul {
+            display: flex;
+            flex-direction: column;  
+            align-items: stretch;        
+            max-height:0;
+            overflow: hidden;
+            transition: 0.7s;
+            list-style: none;
+            li {
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 1rem 2rem;
+                border-bottom: 1px solid gray;
+                text-align: right;   
+              
+                &:hover {
+                    background-color: white;
+                    cursor: pointer;
+                    a {     
+                        color:rgb(218, 165, 32);
+                        font-weight: 500;
+                    }          
+                }
+                a{  
+                    text-decoration: none; 
+                    color: gray;
+                }
+            }
+            
+        }
+        .visible {
+            max-height: 250px; 
+        }
+    
+        @include medium {
+            padding-top: 2rem;
+            ul {
+                display: flex;
+                flex-direction: row;
+                max-height: 250px;
+                list-style: none; 
+                li { 
+                    position: relative;
+                    &:not(:first-child)::after{
+                        content:"";
+                        position: absolute;
+                        left:-2px; top:20%;
+                        height: 60%;
+                        width:1px;
+                        border-right:1px solid gray;
+                    }
+                    &:hover {
+                            background-color: white;            
+                    }
+                    a{
+                        text-decoration: none;   
+                    }
+                }
+            }
+        }    
+    }
+    .heading {
+        display:block;
+        color:white;
+        font-size: 3rem;
+        position: absolute;
+        left:50vw;
+        top:55vh;
+        translate: -50% -50%;  
+        span {
+            font-size: 4rem;
+        }      
+    }  
+}

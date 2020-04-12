@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Dosis";
+    src: url("../../css/fonts/Dosis-Regular.ttf");
+    }       
+
+html {
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%  
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Dosis, sans-serif;
+    letter-spacing: 0.2rem;
+}
