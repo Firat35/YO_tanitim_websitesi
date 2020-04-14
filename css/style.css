@@ -1,3 +1,9 @@
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(360deg); } }
+
 *,
 *::after,
 *::before {
@@ -18,6 +24,22 @@ body {
   font-family: Dosis, sans-serif;
   letter-spacing: 0.2rem; }
 
+.sep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; }
+  .sep .line {
+    border-bottom: 0.1rem solid darkgrey;
+    width: 45%; }
+  .sep .circle {
+    width: 4px;
+    height: 4px;
+    border: 1px solid darkgrey;
+    border-radius: 50%;
+    background-color: darkgrey;
+    margin: 0 2rem; }
+
 header {
   height: 100vh;
   background-image: url(../../img/header-photo.jpg);
@@ -26,7 +48,19 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between; }
+  header .logo {
+    z-index: 1;
+    position: fixed;
+    transform-origin: 63px 50%;
+    animation-duration: 5s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; }
   header nav {
+    position: fixed;
+    right: 0;
+    z-index: 1;
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
@@ -96,7 +130,7 @@ header {
     position: absolute;
     left: 50vw;
     top: 55vh;
-    translate: -50% -50%; }
+    transform: translate(-50%, -50%); }
     header .heading span {
       font-size: 4rem; }
 
@@ -108,20 +142,6 @@ header {
     text-align: center;
     font-size: 3rem;
     padding: 1.5rem 0; }
-  #hakkimizda .sep {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    #hakkimizda .sep .line {
-      border-bottom: 0.1rem solid darkgrey;
-      width: 45%; }
-    #hakkimizda .sep .circle {
-      width: 4px;
-      height: 4px;
-      border: 1px solid darkgrey;
-      border-radius: 50%;
-      background-color: darkgrey;
-      margin: 0 2rem; }
   #hakkimizda .pic {
     margin: 3rem;
     height: 40vh;
@@ -138,19 +158,21 @@ header {
 
 #hizmetlerimiz {
   background-color: gray;
-  color: white; }
+  color: white;
+  padding: 0 2rem; }
   #hizmetlerimiz h1 {
     text-align: center;
     font-size: 3rem;
     padding: 1.5rem 0; }
   #hizmetlerimiz .container {
-    padding: 1.5rem;
     display: grid;
     align-items: start;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 1.5rem;
+    margin: 1rem 0;
+    overflow: hidden; }
     #hizmetlerimiz .container h2 {
       text-align: center;
-      padding: 1.5rem;
       padding-bottom: 0; }
     #hizmetlerimiz .container p {
       padding: 1.5rem; }
@@ -167,6 +189,8 @@ header {
         width: 100%;
         transition: transform 1s;
         object-fit: cover; }
+    #hizmetlerimiz .container:last-child {
+      margin-bottom: 0; }
 
 #iletisim {
   background-color: gray;
@@ -176,3 +200,29 @@ header {
     text-align: center;
     font-size: 3rem;
     padding: 1.5rem 0; }
+  #iletisim .icons {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: flex-start;
+    margin: 2rem 0s; }
+    #iletisim .icons .com {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start; }
+      #iletisim .icons .com div {
+        display: flex;
+        align-items: center;
+        margin: 2rem; }
+        #iletisim .icons .com div div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 0 0 0 2rem; }
+    #iletisim .icons .social {
+      align-self: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      #iletisim .icons .social img {
+        margin: 2rem; }

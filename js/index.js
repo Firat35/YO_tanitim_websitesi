@@ -11,7 +11,7 @@ async function slide() {
   let x = document.getElementsByClassName("mySlides");
   var arr = [...x];
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  
+  let el;
 
   while (true) {
 
@@ -33,14 +33,10 @@ async function slide() {
     await delay(2500);
     arr[3].style.transform = "translateY(100%)";
     arr[0].style.transform = "translateY(0)";
-
-    arr.shift();
-    arr.shift();
-    arr.shift();
-    arr.shift();
-
-    if(arr.length === 0 ){
-        break;
-    }
+    for(let i= 0; i<4 ; i++) {
+      el = arr.shift()
+      arr.push(el);
+    } 
+    
   }
 }

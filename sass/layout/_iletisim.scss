@@ -7,4 +7,37 @@
         font-size: 3rem;
         padding: 1.5rem 0;
     }
+    .icons{
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: flex-start;
+        margin: 2rem 0s;
+        .com {
+            display:flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+             div {
+                 display: flex;
+                 align-items: center;
+                 margin: 2rem; 
+                 div {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     margin : 0 0 0 2rem;
+                 } 
+             } 
+        }
+
+        .social {
+            align-self: stretch;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            img {     
+                margin: 2rem;
+            }
+        }
+    }
 }

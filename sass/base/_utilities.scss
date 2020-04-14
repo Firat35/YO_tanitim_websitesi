@@ -1,0 +1,18 @@
+.sep {
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    margin-bottom: 2rem;
+    .line{
+        border-bottom: 0.1rem solid darkgrey;
+        width: 45%;      
+    }
+    .circle{
+        width: 4px;
+        height: 4px;
+        border: 1px solid darkgrey;
+        border-radius: 50%;            
+        background-color: darkgrey;
+        margin: 0 2rem;
+    }
+}
