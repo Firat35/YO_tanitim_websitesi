@@ -226,3 +226,5 @@ header {
       justify-content: space-between; }
       #iletisim .icons .social img {
         margin: 2rem; }
+  #iletisim img {
+    width: 40rem; }
