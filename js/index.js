@@ -14,29 +14,39 @@ async function slide() {
   let el;
 
   while (true) {
-
-    arr[0].style.transform = "translateY(0)";
-    arr[1].style.transform = "translateY(100%)";
-    arr[2].style.transform = "translateY(-100%)";
-    arr[3].style.transform = "translateY(100%)";
-
+    for(let i=0; i<48; i+=4) {
+      arr[i].style.transform = "translateY(0)";
+      arr[i+1].style.transform = "translateY(100%)";
+      arr[i+2].style.transform = "translateY(-100%)";
+      arr[i+3].style.transform = "translateY(100%)";
+    }
+    await delay(2500);
+    for(let i=0; i<48; i+=4) {
+      arr[i].style.transform = "translateY(-100%)";
+      arr[i+1].style.transform = "translateY(0)";
+    }   
+    await delay(2500);
+    for(let i=0; i<48; i+=4) {
+      arr[i+1].style.transform = "translateY(100%)";
+      arr[i+2].style.transform = "translateY(0)";
+    }       
+    await delay(2500);
+    for(let i=0; i<48; i+=4) {
+      arr[i+2].style.transform = "translateY(-100%)";
+      arr[i+3].style.transform = "translateY(0)";
+    }   
     
     await delay(2500);
-    arr[0].style.transform = "translateY(-100%)";
-    arr[1].style.transform = "translateY(0)";
-    await delay(2500);
-    arr[1].style.transform = "translateY(100%)";
-    arr[2].style.transform = "translateY(0)";
-    await delay(2500);
-    arr[2].style.transform = "translateY(-100%)";
-    arr[3].style.transform = "translateY(0)";
-    await delay(2500);
-    arr[3].style.transform = "translateY(100%)";
-    arr[0].style.transform = "translateY(0)";
-    for(let i= 0; i<4 ; i++) {
-      el = arr.shift()
-      arr.push(el);
-    } 
+    for(let i=0; i<48; i+=4) {
+      arr[i+3].style.transform = "translateY(100%)";
+      arr[i].style.transform = "translateY(0)";
+    }   
+    
+ 
+    // for(let i= 0; i<4 ; i++) {
+    //   el = arr.shift()
+    //   arr.push(el);
+    // } 
     
   }
 }
