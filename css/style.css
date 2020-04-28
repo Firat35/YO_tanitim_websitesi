@@ -43,7 +43,6 @@ body {
 header {
   height: 100vh;
   background-image: radial-gradient(circle farthest-side, rgba(161, 134, 57, 0.6), rgba(255, 255, 255, 0.1)), url(../../img/header-photo.jpg);
-  background-attachment: fixed;
   background-position: center;
   display: flex;
   align-items: flex-start;
@@ -161,7 +160,7 @@ header {
   background: url(../../img/logo.jpg) repeat;
   background-attachment: fixed;
   color: white;
-  padding: 0 2rem; }
+  padding: 0 1rem; }
   #hizmetlerimiz h1 {
     text-align: center;
     font-size: 3rem;
@@ -170,16 +169,16 @@ header {
     display: grid;
     align-items: start;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 1.5rem;
+    padding: 0.5rem;
     margin: 1rem 0;
     overflow: hidden; }
     #hizmetlerimiz .container h2 {
       text-align: center;
       padding-bottom: 0; }
     #hizmetlerimiz .container p {
-      padding: 1.5rem; }
+      padding: 0.5rem; }
     #hizmetlerimiz .container ul {
-      padding: 1.5rem; }
+      padding: 0.5rem; }
     #hizmetlerimiz .container .pic {
       position: relative;
       overflow: hidden;
