@@ -4,15 +4,15 @@
     align-items: center;  
     margin-bottom: 2rem;
     .line{
-        border-bottom: 0.1rem solid darkgrey;
+        border-bottom: 0.1rem solid rgb(73, 73, 73);
         width: 45%;      
     }
     .circle{
         width: 4px;
         height: 4px;
-        border: 1px solid darkgrey;
+        border: 1px solid rgb(73, 73, 73);
         border-radius: 50%;            
-        background-color: darkgrey;
+        background-color: rgb(73, 73, 73);
         margin: 0 2rem;
     }
 }

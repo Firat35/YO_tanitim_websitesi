@@ -14,30 +14,30 @@ async function slide() {
   let el;
 
   while (true) {
-    for(let i=0; i<48; i+=4) {
+    for(let i=0; i<16; i+=4) {
       arr[i].style.transform = "translateY(0)";
       arr[i+1].style.transform = "translateY(100%)";
       arr[i+2].style.transform = "translateY(-100%)";
       arr[i+3].style.transform = "translateY(100%)";
     }
     await delay(2500);
-    for(let i=0; i<48; i+=4) {
+    for(let i=0; i<16; i+=4) {
       arr[i].style.transform = "translateY(-100%)";
       arr[i+1].style.transform = "translateY(0)";
     }   
     await delay(2500);
-    for(let i=0; i<48; i+=4) {
+    for(let i=0; i<16; i+=4) {
       arr[i+1].style.transform = "translateY(100%)";
       arr[i+2].style.transform = "translateY(0)";
     }       
     await delay(2500);
-    for(let i=0; i<48; i+=4) {
+    for(let i=0; i<16; i+=4) {
       arr[i+2].style.transform = "translateY(-100%)";
       arr[i+3].style.transform = "translateY(0)";
     }   
     
     await delay(2500);
-    for(let i=0; i<48; i+=4) {
+    for(let i=0; i<16; i+=4) {
       arr[i+3].style.transform = "translateY(100%)";
       arr[i].style.transform = "translateY(0)";
     }   

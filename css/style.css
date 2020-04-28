@@ -30,14 +30,14 @@ body {
   align-items: center;
   margin-bottom: 2rem; }
   .sep .line {
-    border-bottom: 0.1rem solid darkgrey;
+    border-bottom: 0.1rem solid #494949;
     width: 45%; }
   .sep .circle {
     width: 4px;
     height: 4px;
-    border: 1px solid darkgrey;
+    border: 1px solid #494949;
     border-radius: 50%;
-    background-color: darkgrey;
+    background-color: #494949;
     margin: 0 2rem; }
 
 header {
@@ -157,7 +157,7 @@ header {
       margin: 2rem 3rem; }
 
 #hizmetlerimiz {
-  box-shadow: inset 0 0 150px 800px rgba(148, 108, 0, 0.8);
+  box-shadow: inset 0 0 150px 800px rgba(148, 108, 0, 0.7);
   background: url(../../img/logo.jpg) repeat;
   background-attachment: fixed;
   color: white;
@@ -178,6 +178,8 @@ header {
       padding-bottom: 0; }
     #hizmetlerimiz .container p {
       padding: 1.5rem; }
+    #hizmetlerimiz .container ul {
+      padding: 1.5rem; }
     #hizmetlerimiz .container .pic {
       position: relative;
       overflow: hidden;
@@ -195,7 +197,7 @@ header {
       margin-bottom: 0; }
 
 #iletisim {
-  box-shadow: inset 0 0 150px 800px rgba(148, 108, 0, 0.801);
+  box-shadow: inset 0 0 150px 800px rgba(148, 108, 0, 0.7);
   background: url(../../img/logo.jpg) repeat;
   background-attachment: fixed;
   color: white;
@@ -221,7 +223,6 @@ header {
         #iletisim .icons .com div div {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
           margin: 0 0 0 2rem; }
     #iletisim .icons .social {
       align-self: stretch;
@@ -229,4 +230,4 @@ header {
       flex-wrap: wrap;
       justify-content: space-between; }
       #iletisim .icons .social img {
-        margin: 2rem; }
+        margin: 1rem; }
