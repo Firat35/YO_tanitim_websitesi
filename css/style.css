@@ -137,7 +137,9 @@ header {
 #hizmetlerimiz {
   background-color: #808080;
   color: white;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  line-height: 1.5;
+  letter-spacing: 2px; }
   #hizmetlerimiz h1 {
     text-align: center;
     font-size: 3rem;
@@ -152,10 +154,8 @@ header {
     #hizmetlerimiz .container h2 {
       text-align: center;
       padding-bottom: 0; }
-    #hizmetlerimiz .container p {
-      padding: 0.5rem; }
-    #hizmetlerimiz .container ul {
-      padding: 0.5rem; }
+    #hizmetlerimiz .container p, #hizmetlerimiz .container ul {
+      padding: 1.5rem; }
     #hizmetlerimiz .container .pic {
       position: relative;
       overflow: hidden;
@@ -171,6 +171,9 @@ header {
         object-fit: cover; }
     #hizmetlerimiz .container:last-child {
       margin-bottom: 0; }
+    @media (min-width: 42.625em) {
+      #hizmetlerimiz .container .uzat {
+        width: 95vw; } }
 
 #iletisim {
   background-color: #808080;
@@ -186,6 +189,7 @@ header {
     align-items: flex-start; }
     #iletisim .icons div {
       display: flex;
+      align-items: flex-start;
       margin: 2rem; }
       #iletisim .icons div div {
         display: flex;

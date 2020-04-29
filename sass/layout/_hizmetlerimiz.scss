@@ -2,6 +2,8 @@
     background-color: #808080;
     color: white;
     padding: 0 1rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
     h1{
         text-align: center;
         font-size: 3rem;
@@ -15,17 +17,13 @@
         padding: 0.5rem;
         margin: 1rem 0;
         overflow: hidden;
-        // border: solid 1px darkgray;
         
         h2 {
             text-align: center;
             padding-bottom: 0;
         }
-        p {
-            padding: 0.5rem;
-        }
-        ul {
-            padding: 0.5rem;
+        p, ul {
+            padding: 1.5rem;
         }
         .pic {
             position: relative;
@@ -40,9 +38,16 @@
                 transition: transform 1s;
                 object-fit: cover;   
             }
+            
         }
         &:last-child {
             margin-bottom: 0;
         }    
+        @include medium {
+            .uzat {
+                width: 95vw;
+            }    
+        }
+        
     }
 }
